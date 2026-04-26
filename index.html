@@ -87,7 +87,19 @@
     
 
     <!-- Custom PreBody code is injected here -->
-    
+    <script>
+    function resizeGame() {
+    const c = document.querySelector("canvas");
+    if (c) {
+        c.style.width = "100vw";
+        c.style.height = "100vh";
+        c.style.display = "block";
+        }
+    }
+
+    window.addEventListener("load", resizeGame);
+    window.addEventListener("resize", resizeGame);
+    </script>
 
     <body>
         <!-- Custom BodyStart code is injected here -->
